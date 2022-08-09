@@ -1,0 +1,19 @@
+def HappyNumbers(nums):
+    if nums <= 0:
+        print("Sorry! Please pick a positive number")
+    else:
+        i = list(map(int,str(nums)))
+        squares = []
+        while True:
+            for j in i:
+                squares.append(j ** 2)
+                sums = sum(squares)
+            if sums == 1:
+                break
+            else:
+                i = list(map(int,str(sums)))
+                squares = []
+                continue
+        print("It is a happy number")
+HappyNumbers()
+
